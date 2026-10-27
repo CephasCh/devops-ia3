@@ -1,0 +1,62 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1d2b36;
+  padding: 16px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 40px;
+  max-width: 560px;
+  width: 100%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.tag {
+  color: #0078d4;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+h1 { margin: 8px 0 4px; font-size: 2rem; }
+
+.version {
+  display: inline-block;
+  background: #e6f2fb;
+  color: #0078d4;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+p { line-height: 1.6; }
+
+.flow {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+  margin: 24px 0;
+  flex-wrap: wrap;
+}
+
+.flow li {
+  background: #f3f5f7;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.flow li:not(:last-child)::after { content: "  \2192"; color: #0078d4; }
+
+footer { font-size: 0.8rem; color: #6b7a86; }

@@ -1,0 +1,8 @@
+# Copy this file to terraform.tfvars and fill in your subscription ID.
+# terraform.tfvars is git-ignored so your ID is not pushed to GitHub.
+subscription_id = "00000000-0000-0000-0000-000000000000"
+
+# Optional overrides
+# location            = "Central India"
+# vm_size             = "Standard_B1s"
+# ssh_public_key_path = "~/.ssh/devops_ia3.pub"
