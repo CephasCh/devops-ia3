@@ -26,9 +26,9 @@ Terraform --provisions--> RG, VNet, Subnet, NSG, Public IP, NIC, VM
 ## Setup steps (Windows)
 
 ### 0. Install tools
-- Git, Azure CLI, Terraform, Java 17 (Temurin), Jenkins LTS
+- Git, Azure CLI, Terraform, Java 21 (Temurin), Jenkins LTS
   ```powershell
-  winget install Git.Git Microsoft.AzureCLI Hashicorp.Terraform EclipseAdoptium.Temurin.17.JDK Jenkins.Jenkins
+  winget install Git.Git Microsoft.AzureCLI Hashicorp.Terraform EclipseAdoptium.Temurin.21.JDK Jenkins.Jenkins
   ```
 
 ### 1. Create an SSH key for the VM

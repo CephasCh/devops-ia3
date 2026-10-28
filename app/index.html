@@ -10,15 +10,29 @@
   <main class="card">
     <p class="tag">Deployed automatically by Jenkins</p>
     <h1>Hello from Azure!</h1>
-    <p class="version">Version 1</p>
+    <p class="version">Version 3</p>
     <p>This page was provisioned with <strong>Terraform</strong>, built and deployed by a
        <strong>Jenkins</strong> pipeline, and is served by <strong>nginx</strong> on an Azure VM.</p>
+    <div class="smiley-stage" id="smiley-stage">
+      <button class="smiley" id="smiley" type="button" aria-label="Smiley face - click to make it explode">
+        <svg viewBox="0 0 100 100" aria-hidden="true">
+          <circle cx="50" cy="50" r="46" fill="#FFD43B" stroke="#F0A500" stroke-width="3"/>
+          <ellipse cx="35" cy="38" rx="6" ry="9" fill="#3B2F2F"/>
+          <ellipse cx="65" cy="38" rx="6" ry="9" fill="#3B2F2F"/>
+          <circle cx="23" cy="58" r="7" fill="#FF8FA3" opacity="0.6"/>
+          <circle cx="77" cy="58" r="7" fill="#FF8FA3" opacity="0.6"/>
+          <path d="M28 60 Q50 84 72 60" fill="none" stroke="#3B2F2F" stroke-width="5" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <p class="smiley-hint">Click the smiley!</p>
+    </div>
     <ul class="flow">
       <li>GitHub</li>
       <li>Jenkins</li>
       <li>Azure VM</li>
     </ul>
-    <footer>Ravi Chintapalli &middot; DevOps IA3 Project</footer>
+    <footer>Cephas Ch (URK23AI1027) &middot; DevOps IA3 Project</footer>
   </main>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-# DevOps IA3 - installs Git, Azure CLI, Terraform, Java 17 and Jenkins using winget.
+# DevOps IA3 - installs Git, Azure CLI, Terraform, Java 21 and Jenkins using winget.
 # Run from an ADMINISTRATOR PowerShell window.
 
 $ErrorActionPreference = "Continue"
@@ -18,7 +18,7 @@ $packages = @(
     @{ Id = "Git.Git";                        Name = "Git" },
     @{ Id = "Microsoft.AzureCLI";             Name = "Azure CLI" },
     @{ Id = "Hashicorp.Terraform";            Name = "Terraform" },
-    @{ Id = "EclipseAdoptium.Temurin.17.JDK"; Name = "Java 17 (Temurin JDK)" },
+    @{ Id = "EclipseAdoptium.Temurin.21.JDK"; Name = "Java 21 (Temurin JDK)" },
     @{ Id = "Jenkins.Jenkins";                Name = "Jenkins LTS" }
 )
 

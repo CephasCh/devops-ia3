@@ -60,3 +60,62 @@ p { line-height: 1.6; }
 .flow li:not(:last-child)::after { content: "  \2192"; color: #0078d4; }
 
 footer { font-size: 0.8rem; color: #6b7a86; }
+
+/* ---------- Exploding smiley ---------- */
+.smiley-stage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 24px 0 8px;
+}
+
+.smiley {
+  width: 160px;
+  height: 160px;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: transform 0.15s ease;
+}
+.smiley svg { width: 100%; height: 100%; display: block; }
+.smiley:hover { transform: scale(1.06) rotate(-4deg); }
+.smiley:focus-visible { outline: 3px solid #0078d4; outline-offset: 6px; }
+
+.smiley.pop { animation: smiley-pop 0.25s ease-in forwards; }
+.smiley.back { animation: smiley-back 0.5s cubic-bezier(0.34, 1.56, 0.64, 1); }
+
+@keyframes smiley-pop {
+  0%   { transform: scale(1); opacity: 1; }
+  40%  { transform: scale(1.25); opacity: 1; }
+  100% { transform: scale(0); opacity: 0; }
+}
+@keyframes smiley-back {
+  0%   { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.smiley-hint { margin-top: 8px; font-size: 0.85rem; color: #6b7a86; }
+
+.mini-smiley {
+  position: absolute;
+  left: 50%;
+  top: 80px;               /* centre of the 160px smiley */
+  font-size: 32px;
+  line-height: 1;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  animation: mini-fly 1s cubic-bezier(0.15, 0.7, 0.4, 1) forwards;
+}
+@keyframes mini-fly {
+  0%   { transform: translate(-50%, -50%) scale(0.3) rotate(0deg); opacity: 1; }
+  70%  { opacity: 1; }
+  100% { transform: translate(calc(-50% + var(--dx)), calc(-50% + var(--dy))) scale(var(--s)) rotate(var(--r)); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .smiley:hover { transform: none; }
+  .smiley.pop, .smiley.back, .mini-smiley { animation-duration: 0.01s; }
+}
